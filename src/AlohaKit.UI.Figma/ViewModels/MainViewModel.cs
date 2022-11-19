@@ -20,7 +20,7 @@ namespace AlohaKit.UI.Figma.ViewModels
         {
 #if DEBUG
             // INSERT YOUR FIGMA ACCESS TOKEN
-            Token = "figd_es7MJ7rCvYI5yUUi4KD5qzvUShphLVpaZ679d3Ct";
+            Token = "";
             // INSERT THE FILE ID
             FileId = "";
 #endif
