@@ -54,3 +54,11 @@ CanvasView()
 ```
 
 This way, instead of needing to use the .NET MAUI Graphics Canvas extension methods, you use XAML or C# in a similar way to how you would normally create UI in .NET MAUI.
+
+_What if it could be even simpler?_
+
+You also have the **From Figma to AlohaKit UI** tool available.
+
+![From Figma to AlohaKit UI](images/alohaui-figma.gif)
+
+Turns your Figma design into AlohaKit UI code.
