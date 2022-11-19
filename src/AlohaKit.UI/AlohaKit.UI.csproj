@@ -16,8 +16,14 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Title>AlohaKit UI</Title>
+		<Title>AlohaKit.UI</Title>
 		<Description>An easier way to create drawn controls in .NET MAUI in both XAML and C#.</Description>
+		<Copyright>Javier Suárez Ruiz</Copyright>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageProjectUrl>https://github.com/jsuarezruiz/AlohaKit.UI</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/jsuarezruiz/AlohaKit.UI</RepositoryUrl>
+		<PackageTags>dotnet,graphics,drawn,maui,alohakit</PackageTags>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -26,6 +32,17 @@
 	  <Folder Include="Platforms\MacCatalyst\" />
 	  <Folder Include="Platforms\Tizen\" />
 	  <Folder Include="Platforms\Windows\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\AlohaKit.Animations\icon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\..\AlohaKit.Animations\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 </Project>
