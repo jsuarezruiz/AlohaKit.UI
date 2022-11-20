@@ -1,5 +1,11 @@
 # AlohaKit UI
 
+<div align="center">
+   <a href="https://www.nuget.org/packages/AlohaKit.UI"><img src="https://img.shields.io/nuget/v/AlohaKit.UI?color=blue&style=flat-square&logo=nuget"></a>
+   <a href="https://www.nuget.org/packages/AlohaKit.UI"><img src="https://img.shields.io/nuget/dt/AlohaKit.UI.svg?style=flat-square"></a>
+   <a href="./LICENSE"><img src="https://img.shields.io/github/license/jsuarezruiz/AlohaKit.UI"></a>
+</div>
+
 This library offers an **easier way to create drawn controls** in .NET MAUI in both XAML and C#.
 
 It includes a new **CanvasView** control that allows content such as drawn Layouts or Views so that it creates a single native view that creates the native Canvas but the rest of the child elements become fully drawn and managed by the Canvas.
