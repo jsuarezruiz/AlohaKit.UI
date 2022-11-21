@@ -3,7 +3,7 @@
 <div align="center">
    <a href="https://www.nuget.org/packages/AlohaKit.UI"><img src="https://img.shields.io/nuget/v/AlohaKit.UI?color=blue&style=flat-square&logo=nuget"></a>
    <a href="https://www.nuget.org/packages/AlohaKit.UI"><img src="https://img.shields.io/nuget/dt/AlohaKit.UI.svg?style=flat-square"></a>
-   <a href="./LICENSE"><img src="https://img.shields.io/github/license/jsuarezruiz/AlohaKit.UI"></a>
+   <a href="./LICENSE"><img src="https://img.shields.io/github/license/jsuarezruiz/AlohaKit.UI?style=flat-square"></a>
 </div>
 
 This library offers an **easier way to create drawn controls** in .NET MAUI in both XAML and C#.
@@ -68,3 +68,15 @@ You also have the **From Figma to AlohaKit UI** tool available.
 ![From Figma to AlohaKit UI](images/alohaui-figma.gif)
 
 Turns your Figma design into AlohaKit UI code.
+
+## Contribute
+
+Do you want to contribute?.
+
+**Found a Bug?**
+
+If you find a bug, you can help me by submitting an [issue](https://github.com/jsuarezruiz/AlohaKit.UI/issues). Even better, you can submit a [Pull Request](https://github.com/jsuarezruiz/AlohaKit.UI/pulls) with a fix.
+
+## Copyright and license
+
+Code released under the [MIT license](https://opensource.org/licenses/MIT).
