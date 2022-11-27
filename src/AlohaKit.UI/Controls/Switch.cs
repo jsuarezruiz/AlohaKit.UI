@@ -32,11 +32,14 @@
             set => SetValue(ThumbColorProperty, value);
         }
 
+        public event EventHandler<ToggledEventArgs> Toggled;
+
         public override void StartInteraction(PointF[] points)
         {
             base.StartInteraction(points);
 
-            IsOn = !IsOn;
+            IsOn = !IsOn; 
+            Toggled?.Invoke(this, new ToggledEventArgs(IsOn));
         }
     }
         
