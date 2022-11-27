@@ -1,6 +1,4 @@
-﻿using Microsoft.Maui.Devices.Sensors;
-
-namespace AlohaKit.UI
+﻿namespace AlohaKit.UI
 {
     public interface IVisualElement
     {

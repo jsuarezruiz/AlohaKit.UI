@@ -69,7 +69,7 @@
             {
                 if (child is BindableObject bChild)
                 {
-                    SetInheritedBindingContext(bChild, this.BindingContext);
+                    SetInheritedBindingContext(bChild, BindingContext);
                 }
             }
         }

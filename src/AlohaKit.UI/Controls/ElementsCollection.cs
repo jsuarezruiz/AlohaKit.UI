@@ -6,7 +6,6 @@ namespace AlohaKit.UI
     public class ElementsCollection : ObservableCollection<IElement>
     {
         readonly IElement _parent;
-        readonly ICanvasView _canvasView;
 
         public ElementsCollection()
         {
@@ -16,11 +15,6 @@ namespace AlohaKit.UI
         internal ElementsCollection(IElement parent)
         {
             _parent = parent;
-		}
-
-		internal ElementsCollection(ICanvasView canvasView)
-		{
-			_canvasView = canvasView;
 		}
 
 		protected override void ClearItems()
@@ -53,7 +47,6 @@ namespace AlohaKit.UI
 
         void Invalidate()
         {
-            _canvasView?.Invalidate();
             _parent?.Invalidate();
         }
     }
