@@ -12,6 +12,22 @@
             ScaleX="0.5" ScaleY="0.5"
             Opacity="0.25"
             Fill="Green" />
+        <alohakit:Rectangle
+            WidthRequest="100" HeightRequest="100" 
+            X="200" Y="0" 
+            Fill="Red">
+            <alohakit:Rectangle.Clip>
+                <alohakit:EllipseGeometry 
+                    Center="50, 50"
+                    RadiusX="50"
+                    RadiusY="50"/>
+            </alohakit:Rectangle.Clip>
+            <alohakit:Rectangle.Shadow>
+                <alohakit:Shadow
+                    Offset="6, 6" Radius="12"
+                    Color="Black" />
+            </alohakit:Rectangle.Shadow>
+        </alohakit:Rectangle>
         <alohakit:RoundRectangle
             WidthRequest="50" HeightRequest="50" 
             X="120" Y="10" 

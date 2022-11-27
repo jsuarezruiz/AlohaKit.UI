@@ -43,5 +43,12 @@
 
             return view;
         }
+
+        public static T Clip<T>(this T view, Geometry clip) where T : View
+        {
+            view.Clip = clip;
+
+            return view;
+        }
     }
 }
