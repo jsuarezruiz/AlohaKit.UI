@@ -1,7 +1,4 @@
-﻿using Microsoft.Maui;
-using Microsoft.Maui.Graphics.Text;
-
-namespace AlohaKit.UI
+﻿namespace AlohaKit.UI
 {
 	public abstract class ButtonBase : View
 	{
