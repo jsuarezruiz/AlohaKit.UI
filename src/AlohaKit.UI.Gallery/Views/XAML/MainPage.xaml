@@ -25,11 +25,6 @@
                     RadiusX="50"
                     RadiusY="50"/>
             </alohakit:Rectangle.Clip>
-            <alohakit:Rectangle.Shadow>
-                <alohakit:Shadow
-                    Offset="6, 6" Radius="12"
-                    Color="Black" />
-            </alohakit:Rectangle.Shadow>
         </alohakit:Rectangle>
         <alohakit:RoundRectangle
             WidthRequest="50" HeightRequest="50" 
