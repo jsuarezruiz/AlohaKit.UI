@@ -4,6 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="AlohaKit.UI.Gallery.Views.XAML.MainPage"
     xmlns:alohakit="clr-namespace:AlohaKit.UI;assembly=AlohaKit.UI"
+    xmlns:cupertino="clr-namespace:AlohaKit.UI.Cupertino;assembly=AlohaKit.UI"
+    xmlns:fluent="clr-namespace:AlohaKit.UI.Fluent;assembly=AlohaKit.UI"
+    xmlns:material="clr-namespace:AlohaKit.UI.Material;assembly=AlohaKit.UI"
     Title="AlohaKit UI from XAML">
     <alohakit:CanvasView>
         <alohakit:Rectangle
@@ -90,5 +93,9 @@
             Text="Button"
             TextColor="White"
             Clicked="OnButtonClicked"/>
+        <fluent:Switch
+            X="250" Y="250"
+            TrackColor="LightBlue"
+            ThumbColor="WhiteSmoke"/>
     </alohakit:CanvasView>
 </ContentPage>
