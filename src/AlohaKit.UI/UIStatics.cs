@@ -11,5 +11,6 @@
         public static Polygon Polygon() => new Polygon();
         public static Polyline Polyline() => new Polyline();
         public static Rectangle Rectangle() => new Rectangle();
+        public static Switch Switch() => new Switch();
     }
 }
