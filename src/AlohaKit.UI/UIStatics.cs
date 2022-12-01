@@ -2,6 +2,7 @@
 {
     public static class UIStatics
     {
+        public static Button Button() => new Button();
         public static CanvasView CanvasView() => new CanvasView();
         public static Ellipse Ellipse() => new Ellipse();
         public static Image Image() => new Image(); 
