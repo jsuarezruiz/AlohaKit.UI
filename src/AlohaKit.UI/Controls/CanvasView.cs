@@ -21,10 +21,9 @@ namespace AlohaKit.UI
         }
     }
 
-    public interface ICanvasView
+    public interface ICanvasView : IElement
     {
-        void Draw(ICanvas canvas, RectF bounds);
-        void Invalidate();
+
 	}
 
     [ContentProperty(nameof(Children))]
@@ -42,6 +41,26 @@ namespace AlohaKit.UI
 		}
 
 		public ElementsCollection Children { get; internal set; }
+
+        #region IElement Implementation
+
+        float IVisualElement.X { get => (float)X; set => throw new NotImplementedException(); }
+        float IVisualElement.Y { get => (float)Y; set => throw new NotImplementedException(); }
+        float IVisualElement.WidthRequest { get => (float)WidthRequest; set => WidthRequest = value; }
+        float IVisualElement.HeightRequest { get => (float)HeightRequest; set => HeightRequest = value; }
+        Shadow IVisualElement.Shadow { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        float IVisualElement.TranslationX { get => (float)TranslationX; set => TranslationX = value; }
+        float IVisualElement.TranslationY { get => (float)TranslationY; set => TranslationY = value; }
+        float IVisualElement.ScaleX { get => (float)ScaleX; set => ScaleX = value; }
+        float IVisualElement.ScaleY { get => (float)ScaleY; set => ScaleY = value; }
+        IElement IElement.Parent { get => null; set => throw new NotImplementedException(); }
+
+        public void AttachParent(IElement parent)
+        {
+
+        }
+
+        #endregion
 
         internal void DrawCore(ICanvas canvas, RectF bounds)
         {
@@ -108,5 +127,5 @@ namespace AlohaKit.UI
 				}
 			}
 		}
-	}
+    }
 }
