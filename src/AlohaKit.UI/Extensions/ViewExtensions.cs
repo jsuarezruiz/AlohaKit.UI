@@ -43,5 +43,12 @@
 
             return view;
         }
+
+        public static T Shadow<T>(this T view, Shadow shadow) where T : View
+        {
+            view.Shadow = shadow;
+
+            return view;
+        }
     }
 }
