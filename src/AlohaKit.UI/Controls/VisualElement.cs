@@ -11,6 +11,7 @@
         float HeightRequest { get; set; }
 
         Shadow Shadow { get; set; }
+        Geometry Clip { get; set; }
 
         float TranslationX { get; set; }
         float TranslationY { get; set; }
@@ -51,8 +52,12 @@
         public static readonly BindableProperty ShadowProperty =
             BindableProperty.Create(nameof(Shadow), typeof(Shadow), typeof(VisualElement), null,
                 propertyChanged: InvalidatePropertyChanged);
+      
+        public static readonly BindableProperty ClipProperty =
+            BindableProperty.Create(nameof(Clip), typeof(Geometry), typeof(VisualElement), null,
+                propertyChanged: InvalidatePropertyChanged);
 
-		public static readonly BindableProperty RotationProperty =
+        public static readonly BindableProperty RotationProperty =
 			BindableProperty.Create(nameof(Rotation), typeof(float), typeof(VisualElement), 0f,
 				propertyChanged: InvalidatePropertyChanged);
 
@@ -117,7 +122,13 @@
             set => SetValue(ShadowProperty, value);
         }
 
-		public float Rotation
+        public Geometry Clip
+        {
+            get => (Geometry)GetValue(ClipProperty);
+            set => SetValue(ClipProperty, value);
+        }
+
+        public float Rotation
 		{
 			get => (float)GetValue(RotationProperty);
 			set => SetValue(RotationProperty, value);
