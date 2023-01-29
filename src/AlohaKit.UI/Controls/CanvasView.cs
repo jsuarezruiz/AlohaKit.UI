@@ -56,6 +56,7 @@ namespace AlohaKit.UI
         float IVisualElement.ScaleX { get => (float)ScaleX; set => ScaleX = value; }
         float IVisualElement.ScaleY { get => (float)ScaleY; set => ScaleY = value; }
         IElement IElement.Parent { get => null; set => throw new NotImplementedException(); }
+        Geometry IVisualElement.Clip { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public void AttachParent(IElement parent)
         {

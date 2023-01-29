@@ -44,10 +44,17 @@
             return view;
         }
 
+        public static T Clip<T>(this T view, Geometry clip) where T : View
+        {
+            view.Clip = clip;
+            
+            return view;
+        }
+        
         public static T Shadow<T>(this T view, Shadow shadow) where T : View
         {
             view.Shadow = shadow;
-
+            
             return view;
         }
     }

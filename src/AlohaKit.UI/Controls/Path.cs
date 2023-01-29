@@ -66,7 +66,7 @@ namespace AlohaKit.UI
         {
             var path = new PathF();
 
-            Data?.AppendPath(path);
+            Data?.AppendPath(path, Rect.Zero);
 
             return path;
         }

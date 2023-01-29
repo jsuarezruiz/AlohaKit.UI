@@ -95,7 +95,8 @@ namespace AlohaKit.UI
 
                 canvas.Alpha = (float)Opacity;
                 canvas.Transform(Rotation, TranslationX, TranslationY, ScaleX, ScaleY);
-                
+
+				DrawClip(canvas, bounds);
                 DrawShadow(canvas, bounds);
 
                 base.Draw(canvas, bounds); 
@@ -126,16 +127,27 @@ namespace AlohaKit.UI
             canvas.FillRectangle(bounds);
         }
 
+		void DrawClip(ICanvas canvas, RectF bounds)
+		{
+			if (Clip != null)
+			{
+				var viewBounds = new Rect(X, Y, WidthRequest, HeightRequest);
+				var path = (Clip as IGeometry)?.GetPath(viewBounds);
+
+				canvas.ClipPath(path);
+			}
+		}
+
         void DrawShadow(ICanvas canvas, RectF bounds)
         {
-            if (Shadow != null)
-            {
-                var offset = new SizeF((float)Shadow.Offset.X, (float)Shadow.Offset.Y);
-                var radius = Shadow.Radius;
-                var color = Shadow.Color;
+			if (Shadow != null)
+			{
+				var offset = new SizeF((float)Shadow.Offset.X, (float)Shadow.Offset.Y);
+				var radius = Shadow.Radius;
+				var color = Shadow.Color;
 
-                canvas.SetShadow(offset, radius, color);
-            }
+				canvas.SetShadow(offset, radius, color);
+			}
         }
     }
 }
