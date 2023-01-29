@@ -69,6 +69,19 @@ namespace AlohaKit.UI
             Draw(canvas, bounds);
         }
 
+        protected override void OnBindingContextChanged()
+        {
+            base.OnBindingContextChanged();
+
+            foreach (var child in Children)
+            {
+                if (child is BindableObject bindableObject)
+                {
+                    SetInheritedBindingContext(bindableObject, BindingContext);
+                }
+            }
+        }
+
         public virtual void Draw(ICanvas canvas, RectF bounds)
         {
             foreach (var child in Children)

@@ -1,6 +1,4 @@
-﻿using Android.Graphics;
-
-namespace AlohaKit.UI.Gallery.Controls
+﻿namespace AlohaKit.UI.Gallery.Controls
 {
     public class TemplatedToggleSwitch : TemplatedView
     {
@@ -20,12 +18,36 @@ namespace AlohaKit.UI.Gallery.Controls
                     {
                         toggleSwitch.UpdateIsOn();
                     }
-                });
+                }); 
+        
+        public static readonly BindableProperty TrackColorProperty = BindableProperty.Create(
+            nameof(TrackColor),
+            typeof(Color),
+            typeof(Switch),
+            null);
+
+        public static readonly BindableProperty ThumbColorProperty = BindableProperty.Create(
+            nameof(ThumbColor),
+            typeof(Color),
+            typeof(Switch),
+            null);
 
         public bool IsOn
         {
             get => (bool)GetValue(IsOnProperty);
             set => SetValue(IsOnProperty, value);
+        }
+
+        public Color TrackColor
+        {
+            get => (Color)GetValue(TrackColorProperty);
+            set => SetValue(TrackColorProperty, value);
+        }
+
+        public Color ThumbColor
+        {
+            get => (Color)GetValue(ThumbColorProperty);
+            set => SetValue(ThumbColorProperty, value);
         }
 
         public event EventHandler<ToggledEventArgs> Toggled;
