@@ -42,6 +42,8 @@ namespace AlohaKit.UI
 
 		public ElementsCollection Children { get; internal set; }
 
+        public event EventHandler<DrawingEventArgs> Drawing;
+
         #region IElement Implementation
 
         float IVisualElement.X { get => (float)X; set => throw new NotImplementedException(); }
@@ -76,6 +78,8 @@ namespace AlohaKit.UI
                     child.Draw(canvas, bounds);
                 }
             }
+
+            Drawing?.Invoke(this, new DrawingEventArgs(canvas, bounds));
         }
 
 		void IDisposable.Dispose()
