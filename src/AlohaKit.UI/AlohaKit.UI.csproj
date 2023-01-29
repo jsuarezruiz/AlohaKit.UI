@@ -20,12 +20,14 @@
 		<Description>An easier way to create drawn controls in .NET MAUI in both XAML and C#.</Description>
 		<Copyright>Javier Suárez Ruiz</Copyright>
 		<PackageIcon>icon.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReadmeFile>NUGET.md</PackageReadmeFile>
 		<PackageProjectUrl>https://github.com/jsuarezruiz/AlohaKit.UI</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jsuarezruiz/AlohaKit.UI</RepositoryUrl>
 		<PackageTags>dotnet,graphics,drawn,maui,alohakit</PackageTags>
 		<AssemblyVersion>1.0.0.1</AssemblyVersion>
 		<FileVersion>1.0.0.1</FileVersion>
+		<Version>1.0.2</Version>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -41,7 +43,11 @@
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Include="..\..\README.md">
+	  <None Include="..\..\docs\NUGET.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="..\..\LICENSE">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>

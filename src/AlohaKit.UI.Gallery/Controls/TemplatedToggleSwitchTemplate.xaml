@@ -9,6 +9,7 @@
     <ControlTemplate x:Key="ToggleSwitchTemplate">
         <alohakit:CanvasView
             x:Name="Part_Canvas"
+            BindingContext="{Binding Source={RelativeSource TemplatedParent}}"
             HeightRequest="100"
             WidthRequest="200"
             HorizontalOptions="Start">
@@ -24,11 +25,8 @@
 	            Y="-1.7763568E-15"
 	            WidthRequest="80"
 	            HeightRequest="40"
-	            CornerRadius="250">
-                <alohakit:RoundRectangle.Fill>
-                    <SolidColorBrush Color="#2277DD" />
-                </alohakit:RoundRectangle.Fill>
-            </alohakit:RoundRectangle>
+	            CornerRadius="250" 
+                Fill="{Binding TrackColor}" />
             <alohakit:RoundRectangle
 	            X="43.2"
 	            Y="3.2"
@@ -54,11 +52,8 @@
 	            Y="3.2"
 	            WidthRequest="32.8"
 	            HeightRequest="32.8"
-	            Data="M32.8 16.4C32.8 25.4575 25.4575 32.8 16.4 32.8C7.34253 32.8 0 25.4575 0 16.4C0 7.34253 7.34253 0 16.4 0C25.4575 0 32.8 7.34253 32.8 16.4Z">
-                <alohakit:Path.Fill>
-                    <SolidColorBrush Color="#FFFFFF" />
-                </alohakit:Path.Fill>
-            </alohakit:Path>
+	            Data="M32.8 16.4C32.8 25.4575 25.4575 32.8 16.4 32.8C7.34253 32.8 0 25.4575 0 16.4C0 7.34253 7.34253 0 16.4 0C25.4575 0 32.8 7.34253 32.8 16.4Z"
+                Fill="{Binding ThumbColor}" />
             <alohakit:Path
                 x:Name="Part_Thumb"
 	            X="43.6"
@@ -83,6 +78,8 @@
 
     <Style TargetType="controls:TemplatedToggleSwitch">
         <Setter Property="ControlTemplate" Value="{StaticResource ToggleSwitchTemplate}" />
+        <Setter Property="TrackColor" Value="#2277DD" />
+        <Setter Property="ThumbColor" Value="#FFFFFF" />
     </Style>
-    
+
 </ResourceDictionary>
