@@ -132,7 +132,7 @@ namespace AlohaKit.UI
             {
                 var offset = new SizeF((float)Shadow.Offset.X, (float)Shadow.Offset.Y);
                 var radius = Shadow.Radius;
-                var color = Shadow.Color;
+				var color = Shadow.Color.WithAlpha((float)Opacity);
 
                 canvas.SetShadow(offset, radius, color);
             }
