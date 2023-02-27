@@ -128,14 +128,15 @@ namespace AlohaKit.UI
 
         void DrawShadow(ICanvas canvas, RectF bounds)
         {
-            if (Shadow != null)
-            {
-                var offset = new SizeF((float)Shadow.Offset.X, (float)Shadow.Offset.Y);
-                var radius = Shadow.Radius;
-                var color = Shadow.Color;
+			if (Shadow != null)
+			{
+				var offset = new SizeF((float)Shadow.Offset.X, (float)Shadow.Offset.Y);
+				var radius = Shadow.Radius;
+				var opacity = (float)Math.Min(Shadow.Opacity, Opacity);
+				var color = Shadow.Color.WithAlpha(opacity);
 
-                canvas.SetShadow(offset, radius, color);
-            }
+				canvas.SetShadow(offset, radius, color);
+			}
         }
     }
 }

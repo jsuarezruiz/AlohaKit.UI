@@ -19,7 +19,14 @@
             WidthRequest="50" HeightRequest="50" 
             X="120" Y="10" 
             CornerRadius="12, 0, 0, 24"
-            Fill="Orange" />
+            Opacity="0.85"
+            Fill="Orange">
+            <alohakit:RoundRectangle.Shadow>
+                <alohakit:Shadow
+                    Offset="6, 6" Radius="12"
+                    Color="OrangeRed" />
+            </alohakit:RoundRectangle.Shadow>
+        </alohakit:RoundRectangle>
         <alohakit:Ellipse
             WidthRequest="50" HeightRequest="50" 
             X="130" Y="70">
